@@ -10,6 +10,19 @@ namespace AudioDevices
         private string albumSource;
         private category style;
         private Time length;
+        public Track() { }
+        public Track(int id) {
+            this.id = id;
+        }
+        public Track(int id, string name) {
+            this.id = id;
+            this.name = name;
+        }
+        public Track(int id, string artist, string name) {
+            this.id = id;
+            this.name = name;
+            this.artist = artist;
+        }
     }
     public enum category
     {
@@ -35,4 +48,5 @@ namespace AudioDevices
         Trance,
         Techno
     }
+
 }
