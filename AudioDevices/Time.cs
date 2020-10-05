@@ -15,17 +15,13 @@ namespace AudioDevices
             _minutes = (seconds % 3600) / 60;
             _seconds = (seconds % 3600) % 60;
         }
-        public Time(int minutes, int seconds)
+        public Time(int minutes, int seconds) : this(minutes * 60 + seconds)
         {
-            _hours = minutes / 60;
-            _minutes = minutes % 60;
-            _seconds = seconds;
+
         }
-        public Time (int hours, int minutes, int seconds)
+        public Time (int hours, int minutes, int seconds) : this(hours * 3600 + minutes * 60 + seconds)
         {
-            _hours = hours;
-            _minutes = minutes;
-            _seconds = seconds;
+    
         }
         public override string ToString()
         {
@@ -36,7 +32,7 @@ namespace AudioDevices
             result += ":";
             result += _seconds < 10 ? "0" + _seconds : _seconds.ToString();
 
-            return _hours + ":" + _minutes + ":" + _seconds + ".";
+            return result;
         }
     }
 }
