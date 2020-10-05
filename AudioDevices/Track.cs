@@ -4,12 +4,14 @@ namespace AudioDevices
 {
     public class Track
     {
+        // Initialize private fields
         private int id { get; set; }
         private string name;
         private string artist;
         private string albumSource;
         private category style;
         private Time length;
+
         public Time GetLength()
         {
             return length;
