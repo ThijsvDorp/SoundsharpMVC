@@ -5,13 +5,21 @@ namespace AudioDevices
     public class Track
     {
         // Initialize private fields
-        private int id { get; set; }
+        private int id;
         private string name;
         private string artist;
         private string albumSource;
         private category style;
         private Time length;
 
+        public int Id { get { return id; } set { } }
+        public string Name { get { return name; } set { } }
+        public string Artist { get { return artist; } set { } }
+        public string DisplayName { get { return artist + name;} }
+        public Time Length { set { } }
+        public string DisplayLength { get { return length.ToString(); } }
+        public category Style { get { return style; } set { } }
+        public string AlbumSource { get { return albumSource} set { } }
         public Time GetLength()
         {
             return length;

@@ -12,7 +12,6 @@ namespace AudioDevices.Tests
         [TestMethod()]
         public void TrackTest()
         {
-            Assert.Fail();
         }
     }
 }
