@@ -15,11 +15,21 @@ namespace AudioDevices
         public int Id { get { return id; } set { } }
         public string Name { get { return name; } set { } }
         public string Artist { get { return artist; } set { } }
-        public string DisplayName { get { return artist + name;} }
+        public string DisplayName { get {
+                if (String.IsNullOrEmpty(artist) || String.IsNullOrEmpty(name))
+                {
+                    return "Unknown";
+                }
+                else
+                {
+                    return artist + name;
+                }
+                
+                return artist + name;} }
         public Time Length { set { } }
         public string DisplayLength { get { return length.ToString(); } }
         public category Style { get { return style; } set { } }
-        public string AlbumSource { get { return albumSource} set { } }
+        public string AlbumSource { get { return albumSource; } set { } }
         public Time GetLength()
         {
             return length;
