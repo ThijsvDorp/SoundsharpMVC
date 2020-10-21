@@ -12,9 +12,9 @@ namespace AudioDevices
         private Category style;
         private Time length;
 
-        public int Id { get { return id; } set { } }
-        public string Name { get { return name; } set { } }
-        public string Artist { get { return artist; } set { } }
+        public int Id { get { return id; } set { id = value; } }
+        public string Name { get { return name; } set { name = value; } }
+        public string Artist { get { return artist; } set { artist = value; } }
         public string DisplayName
         {
             get
@@ -29,10 +29,11 @@ namespace AudioDevices
                 }
             }
         }
-        public Time Length { get { return length; } set { } }
-        public string DisplayLength { get { return length.ToString(); } }
-        public Category Style { get { return style; } set { } }
-        public string AlbumSource { get { return albumSource; } set { } }
+        //Definieer Get en Setters voor Private fields
+        public Time Length { get { return length; } set { length = value ; } }
+        public string DisplayLength { get { return this.length.ToString(); } }
+        public Category Style { get { return style; } set { style = value; } }
+        public string AlbumSource { get { return albumSource; } set { albumSource = value; } }
         public Time GetLength()
         {
             return length;

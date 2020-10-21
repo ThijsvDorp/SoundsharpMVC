@@ -11,6 +11,36 @@ namespace SoundsharpMVC.Controllers
 {
     public class TrackController : Controller
     {
+
+        public ActionResult Create()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
+        {
+            try
+            {
+                //Probeer alle info op te slaan en toe te voegen aan de tracklist.
+                int hours = int.Parse(collection["Hours"]);
+                int minutes = int.Parse(collection["Minutes"]);
+                int seconds = int.Parse(collection["Seconds"]);
+                Tracks track = new Tracks();
+                track.Name = collection["Name"];
+                track.Artist = collection["Artist"];
+                track.AlbumSource = collection["AlbumSource"];
+                track.Length = new AudioDevices.Time(hours, minutes, seconds);
+                track.Style = (Category)Enum.Parse(typeof(Category), collection["Style"]);
+                trackList.Add(track);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
         private static List<Tracks> trackList;
         public TrackController()
         {
@@ -32,27 +62,6 @@ namespace SoundsharpMVC.Controllers
             return View();
         }
 
-        // GET: Track/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Track/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
         // GET: Track/Edit/5
         public ActionResult Edit(int id)
