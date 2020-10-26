@@ -1,5 +1,4 @@
-﻿@model IEnumerable<AudioDevices.Tracks>
-
+﻿@model AudioDevices.TrackList
 @{
     ViewBag.Title = "Index";
 }
@@ -12,24 +11,23 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.GetAllTracks().FirstOrDefault().Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Artist)
+            @Html.DisplayNameFor(model => model.GetAllTracks().FirstOrDefault().Artist)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Style)
+            @Html.DisplayNameFor(model => model.GetAllTracks().FirstOrDefault().Style)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AlbumSource)
+            @Html.DisplayNameFor(model => model.GetAllTracks().FirstOrDefault().AlbumSource)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DisplayLength)
+            @Html.DisplayNameFor(model => model.GetAllTracks().FirstOrDefault().DisplayLength)
         </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
+@foreach (var item in Model.Shuffle()) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
@@ -52,6 +50,8 @@
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
-}
-
+}       
 </table>
+<h5>Totale tijd : @Model.TotalTime</h5>
+<hr />
+           

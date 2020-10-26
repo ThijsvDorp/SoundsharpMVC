@@ -32,7 +32,7 @@ namespace SoundsharpMVC.Controllers
                 track.AlbumSource = collection["AlbumSource"];
                 track.Length = new AudioDevices.Time(hours, minutes, seconds);
                 track.Style = (Category)Enum.Parse(typeof(Category), collection["Style"]);
-                trackList.Add(track);
+                trackList1.Add(track);
                 return RedirectToAction("Index");
             }
             catch
@@ -41,19 +41,19 @@ namespace SoundsharpMVC.Controllers
             }
         }
 
-        private static List<Tracks> trackList;
+        private static TrackList trackList1;
         public TrackController()
         {
-            if (trackList == null)
+            if (trackList1 == null)
             {
-                trackList = DataProvider.GenerateDefaultTracks();
+                trackList1 = DataProvider.GenerateDefaultTracks();
             }
         }
 
         // GET: Track
         public ActionResult Index()
         {
-            return View(trackList);
+            return View(trackList1);
         }
 
         // GET: Track/Details/5

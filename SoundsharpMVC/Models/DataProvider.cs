@@ -9,10 +9,10 @@ namespace SoundsharpMVC.Models
 {
     public static class DataProvider
     {
-        public static List<Tracks> GenerateDefaultTracks()
+        public static TrackList GenerateDefaultTracks()
         {
             //Maak een lijst genaamd trackList aan en instantieer een nieuwe list.
-            List<Tracks> trackList = new List<Tracks>();
+            TrackList trackList1 = new TrackList();
             //Track 1
             Tracks t1 = new Tracks();
             t1.Name = "Yellow";
@@ -42,11 +42,11 @@ namespace SoundsharpMVC.Models
             t4.Length = new AudioDevices.Time(2, 72);
 
             //Voeg de tracks toe aan de list
-            trackList.Add(t1);
-            trackList.Add(t2);
-            trackList.Add(t3);
-            trackList.Add(t4);
-            return trackList;
+            trackList1.Add(t1);
+            trackList1.Add(t2);
+            trackList1.Add(t3);
+            trackList1.Add(t4);
+            return trackList1;
             
         }
 

@@ -47,8 +47,8 @@ namespace AudioDevices
             string[] time = length.ToString().Split(':');
                         //Converteer de gesplitste waardes weer terug naar Int waardes en reken deze om naar seconden (1uur = 3600sec, 1min = 60sec).
             int seconds = (Convert.ToInt32(time[0]) * 3600) + (Convert.ToInt32(time[1]) * 60) + (Convert.ToInt32(time[2]));
-                        //Return de berkende seconden.
-            return GetLengthInSeconds();
+            //Return de berkende seconden.
+            return seconds;
         }
         //Maak 4 constructors aan.
         public Tracks() { }

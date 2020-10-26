@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AudioDevices
 {
-    class TrackList
+   public class TrackList
     {
         //Maak een private field aan gemaakt tracks
        private List<Tracks> tracks;
