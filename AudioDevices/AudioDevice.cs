@@ -42,5 +42,12 @@ namespace AudioDevices.Devices
         {
             return "";
         }
+        //Maak een aantal public properties die getten of setten.
+        public int SerialId { get { return serialId; } }
+        public string Model { get { return model; } set { } }
+        public string Make { get { return make; } set { } }
+        public decimal PriceExBtw { get { return priceExBtw; } set { } }
+        public decimal ConsumerPrice { get { return 0; } }
+        public DateTime CreationDate { get { return creationDate; } set { } }
     }
 }
