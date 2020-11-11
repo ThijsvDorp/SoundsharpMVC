@@ -40,7 +40,10 @@ namespace AudioDevices.Devices
             return str;
         }
         //Constructor voor Memorecorder
-        public MemoRecorder() { }
+        public MemoRecorder()
+        {
+     
+        }
         
         private MemoCartRidgeType MaxCartridgeType { get { return maxCartRidgeType;} set { maxCartRidgeType = value; } }
     }

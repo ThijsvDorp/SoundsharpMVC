@@ -29,12 +29,12 @@ namespace AudioDevices.Devices
             //Als makeInfo true is, voeg een string toe die Make laat zien.
             if (makeInfo == true)
             {
-                text += " Make:" + make;
+                text += " Make: " + make;
             }
             //Als modelInfo true is, voeg een string toe die Model laat zien.
             if (modelInfo == true)
             {
-                text += " Model:" + model;
+                text += " Model: " + model;
             }
             return text;
         }
@@ -54,9 +54,13 @@ namespace AudioDevices.Devices
                 return "Lifetime unknown";
             }
         }
+        protected AudioDevice()
+        {
+            serialId = ++lastID; 
+        }
         public abstract string DisplayStorageCapacity();
 
-        protected static int lastID = 1;
+        protected static int lastID = 0;
         //Maak een aantal public properties die getten of setten.
         public int SerialId { get { return serialId; } }
         public string Model { get { return model; } set { model = value; } }
