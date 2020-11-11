@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using AudioDevices.Devices;
+using SoundsharpMVC;
+using static AudioDevices.Devices.MemoRecorder;
 
 namespace SoundsharpMVC.Models
 {
@@ -15,6 +17,6 @@ namespace SoundsharpMVC.Models
        public string Model { get; set; }
        public decimal PriceExBtw { get; set; }
        public DateTime CreationDate { get; set; }
-      // public MemoCartridgeType MemoCartridgeType { get; set; }
+       public MemoCartRidgeType MemoCartridgeType { get; set; }
     }
 }

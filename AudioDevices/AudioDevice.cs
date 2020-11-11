@@ -58,7 +58,7 @@ namespace AudioDevices.Devices
         {
             serialId = ++lastID; 
         }
-        public abstract string DisplayStorageCapacity();
+       // public abstract string DisplayStorageCapacity();
 
         protected static int lastID = 0;
         //Maak een aantal public properties die getten of setten.

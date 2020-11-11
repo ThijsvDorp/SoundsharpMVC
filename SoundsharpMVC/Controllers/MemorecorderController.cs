@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using static AudioDevices.Devices.MemoRecorder;
 
 namespace SoundsharpMVC.Controllers
 {
@@ -32,21 +33,19 @@ namespace SoundsharpMVC.Controllers
         {
             return View();
         }
-
-        // GET: Memorecorder/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Memorecorder/Create
         [HttpPost]
+        // GET: Memorecorder/Create
         public ActionResult Create(FormCollection collection)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                MemoRecorder newRecorder = new MemoRecorder();
+                newRecorder.Make = collection["Make"];
+                newRecorder.Model = collection["Model"];
+                newRecorder.CreationDate = DateTime.Parse(collection["CreationDate"]);
+                newRecorder.PriceExBtw = Decimal.Parse(collection["PriceExBtw"]);
+                newRecorder.MaxCartridgeType = (MemoCartRidgeType)Enum.Parse(typeof(MemoCartRidgeType), collection["MemoCartridgeType"]);
+                memoRecorders.Add(newRecorder);
                 return RedirectToAction("Index");
             }
             catch
@@ -55,6 +54,7 @@ namespace SoundsharpMVC.Controllers
             }
         }
 
+  
         // GET: Memorecorder/Edit/5
         public ActionResult Edit(int id)
         {

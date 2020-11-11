@@ -10,7 +10,7 @@ namespace AudioDevices.Devices
     {
         private MemoCartRidgeType maxCartRidgeType;
         //Maak een enum met alle verschillende cartridge soorten.
-        enum MemoCartRidgeType
+        public enum MemoCartRidgeType
         {
             c60,
             c90,
@@ -45,6 +45,6 @@ namespace AudioDevices.Devices
      
         }
         
-        private MemoCartRidgeType MaxCartridgeType { get { return maxCartRidgeType;} set { maxCartRidgeType = value; } }
+        public MemoCartRidgeType MaxCartridgeType { get { return maxCartRidgeType;} set { maxCartRidgeType = value; } }
     }
 }
