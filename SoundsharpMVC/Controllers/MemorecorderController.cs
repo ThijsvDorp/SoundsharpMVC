@@ -13,7 +13,18 @@ namespace SoundsharpMVC.Controllers
         // GET: Memorecorder
         public ActionResult Index()
         {
-            return View();
+            List<VMMemorecorder> vmMemoRecorders = new List<VMMemorecorder>();
+            foreach (var item in memoRecorders)
+            {
+                VMMemorecorder recorder = new VMMemorecorder();
+                recorder.Make = item.Make;
+                recorder.Model = item.Model;
+                recorder.PriceExBtw = item.PriceExBtw;
+                recorder.CreationDate = item.CreationDate;
+                recorder.SerialId = item.SerialId;
+                vmMemoRecorders.Add(recorder);
+            }
+            return View(vmMemoRecorders);
         }
 
         // GET: Memorecorder/Details/5
