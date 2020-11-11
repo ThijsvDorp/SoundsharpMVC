@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AudioDevices.Devices;
+using SoundsharpMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -83,6 +85,14 @@ namespace SoundsharpMVC.Controllers
             catch
             {
                 return View();
+            }
+        }
+        private static List<MemoRecorder> memoRecorders;
+        public MemorecorderController()
+        {
+            if(memoRecorders == null)
+            {
+                memoRecorders = DataProvider.GetDefaultMemorecorders();
             }
         }
     }

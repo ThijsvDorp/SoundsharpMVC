@@ -73,6 +73,25 @@ namespace SoundsharpMVC.Models
             mr3.CreationDate = new DateTime(2010, 1, 5);
             return recorders;
         }
-        
+        public static List<MemoRecorder> GetDefaultMemorecorders()
+        {
+            List<MemoRecorder> recorders = new List<MemoRecorder>();
+            MemoRecorder mr1 = new MemoRecorder();
+            mr1.Make = "Sony";
+            mr1.Model = "ICD-BX700";
+            mr1.PriceExBtw = 49.99m;
+            mr1.CreationDate = new DateTime(2010, 10, 1);
+            MemoRecorder mr2 = new MemoRecorder();
+            mr2.Make = "Philips";
+            mr2.Model = "Voice Tracer LF";
+            mr2.PriceExBtw = 139.00m;
+            mr2.CreationDate = new DateTime(2010, 1, 10);
+            MemoRecorder mr3 = new MemoRecorder();
+            mr3.Make = "Olympus";
+            mr3.Model = "VN 500";
+            mr3.PriceExBtw = 30.00m;
+            mr3.CreationDate = new DateTime(2010, 1, 5);
+            return recorders;
+        }
     }
 }
