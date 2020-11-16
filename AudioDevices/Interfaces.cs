@@ -9,7 +9,7 @@ namespace AudioDevices.Interfaces
 {
     class Interfaces
     {
-        interface IDisplay
+        public interface IDisplay
         {
             string GetResolutionInfo();
             int DisplayWidth { get; set; }
