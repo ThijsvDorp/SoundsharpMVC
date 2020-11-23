@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-
-
 namespace SoundsharpMVC.Models
 {
     public static class DataProvider
@@ -91,7 +89,21 @@ namespace SoundsharpMVC.Models
             mr3.Model = "VN 500";
             mr3.PriceExBtw = 30.00m;
             mr3.CreationDate = new DateTime(2010, 1, 5);
+            recorders.Add(mr1);
+            recorders.Add(mr2);
+            recorders.Add(mr3);
             return recorders;
+        }
+        public static List<CdDiscMan> GetDefaultCdDiscMan()
+        {
+            List<CdDiscMan> DiscMans = new List<CdDiscMan>();
+            CdDiscMan dm1 = new CdDiscMan();
+            dm1.DisplayWidth = 5;
+            dm1.DisplayHeight = 5;
+            dm1.Make = "Test";
+            
+
+                return DiscMans;
         }
     }
 }

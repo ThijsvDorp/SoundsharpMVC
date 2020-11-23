@@ -9,7 +9,7 @@ using static AudioDevices.Interfaces.Interfaces;
 
 namespace AudioDevices.Devices
 {
-    class CdDiscMan : AudioDevice, IDisplay
+    public class CdDiscMan : AudioDevice, IDisplay
     {
         private readonly int mBSize = 700;
         private int displayWidth;

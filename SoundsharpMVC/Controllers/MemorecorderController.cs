@@ -33,6 +33,11 @@ namespace SoundsharpMVC.Controllers
         {
             return View();
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
         [HttpPost]
         // GET: Memorecorder/Create
         public ActionResult Create(FormCollection collection)
@@ -53,8 +58,6 @@ namespace SoundsharpMVC.Controllers
                 return View();
             }
         }
-
-  
         // GET: Memorecorder/Edit/5
         public ActionResult Edit(int id)
         {

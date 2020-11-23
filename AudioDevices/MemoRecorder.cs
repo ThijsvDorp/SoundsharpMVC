@@ -42,7 +42,7 @@ namespace AudioDevices.Devices
         //Constructor voor Memorecorder
         public MemoRecorder()
         {
-     
+
         }
         
         public MemoCartRidgeType MaxCartridgeType { get { return maxCartRidgeType;} set { maxCartRidgeType = value; } }
