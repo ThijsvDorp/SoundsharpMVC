@@ -100,10 +100,32 @@ namespace SoundsharpMVC.Models
             CdDiscMan dm1 = new CdDiscMan();
             dm1.DisplayWidth = 5;
             dm1.DisplayHeight = 5;
-            dm1.Make = "Test";
-            
+            dm1.Make = "Sony";
+            dm1.Model = "XP10";
 
-                return DiscMans;
+            CdDiscMan dm2 = new CdDiscMan();
+            dm2.DisplayWidth = 6;
+            dm2.DisplayHeight = 6;
+            dm2.Make = "Sony";
+            dm2.Model = "XP20";
+
+            CdDiscMan dm3 = new CdDiscMan();
+            dm3.DisplayWidth = 7;
+            dm3.DisplayHeight = 7;
+            dm3.Make = "Olympus";
+            dm3.Model = "VN 600";
+
+            CdDiscMan dm4 = new CdDiscMan();
+            dm4.DisplayWidth = 8;
+            dm4.DisplayHeight = 8;
+            dm4.Make = "Test";
+            dm4.Model = "Test1";
+
+            DiscMans.Add(dm1);
+            DiscMans.Add(dm2);
+            DiscMans.Add(dm3);
+            DiscMans.Add(dm4);
+            return DiscMans;
         }
     }
 }
