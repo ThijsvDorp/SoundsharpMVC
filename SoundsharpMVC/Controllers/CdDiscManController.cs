@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AudioDevices.Devices;
+using SoundsharpMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,29 @@ namespace SoundsharpMVC.Controllers
 {
     public class CdDiscManController : Controller
     {
+        private static List<CdDiscMan> CdDiscMan;
+        public CdDiscManController()
+        {
+            if(CdDiscMan == null)
+            {
+                CdDiscMan = DataProvider.GetDefaultCdDiscMan();
+            }
+        }
         // GET: CdDiscMan
         public ActionResult Index()
         {
-            return View();
+            List<VMDiscMan> CdDiscMans = new List<VMDiscMan>();
+            foreach (var item in CdDiscMan)
+            {
+                VMDiscMan DiscMan = new VMDiscMan();
+                DiscMan.DisplayHeight = item.DisplayHeight;
+                DiscMan.DisplayWidth = item.DisplayWidth;
+                DiscMan.Make = item.Make;
+                DiscMan.Model = item.Model;
+                DiscMan.TotalPixels = item.TotalPixels;
+                CdDiscMans.Add(DiscMan);
+            }
+            return View(CdDiscMans);
         }
 
         // GET: CdDiscMan/Details/5

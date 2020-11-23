@@ -33,5 +33,7 @@ namespace SoundsharpMVC.Models
         public System.Data.Entity.DbSet<AudioDevices.Tracks> Tracks { get; set; }
 
         public System.Data.Entity.DbSet<SoundsharpMVC.Models.VMMemorecorder> VMMemorecorders { get; set; }
+
+        public System.Data.Entity.DbSet<SoundsharpMVC.Models.VMDiscMan> VMDiscMen { get; set; }
     }
 }

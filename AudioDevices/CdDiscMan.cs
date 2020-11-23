@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using static AudioDevices.Devices.MemoRecorder;
 using AudioDevices;
 using static AudioDevices.Interfaces.Interfaces;
+using System.ComponentModel.DataAnnotations;
 
 namespace AudioDevices.Devices
 {
