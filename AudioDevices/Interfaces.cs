@@ -16,5 +16,12 @@ namespace AudioDevices.Interfaces
             int DisplayHeight { get; set; }
             int TotalPixels { get; }
         }
+        public interface ITrackList
+        {
+            bool HasTracks();
+            void AddTrackList(TrackList trackList);
+            void RemoveTrackList();
+            TrackList TrackList { get; }
+        }
     }
 }
