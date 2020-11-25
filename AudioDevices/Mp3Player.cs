@@ -8,7 +8,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace AudioDevices.Devices
 {
-    class Mp3Player : ITrackList
+   public class Mp3Player : ITrackList
     {
 
         //Initialiseer private fields
@@ -41,9 +41,12 @@ namespace AudioDevices.Devices
         }
        public void AddTrackList(TrackList trackList) 
        {
-            
+            trackList.Add(new Tracks());
        }
-       public void RemoveTrackList() { }
+       public void RemoveTrackList() 
+        {
+            trackList.Remove(new Tracks());
+        }
        public string DisplayStorageCapacity()
        {
             int capacity = mBSize;
@@ -58,9 +61,9 @@ namespace AudioDevices.Devices
        }
         public int MbSize { get { return mBSize; } set { mBSize = value; } }
         public int DisplayWidth { get { return displayWidth; } set { displayWidth = value; } }
-        public int DisplayHeight { get { return displayWidth; } set { displayWidth = value; } }
+        public int DisplayHeight { get { return displayHeight; } set { displayHeight = value; } }
         public int TotalPixels { get { return displayHeight * displayWidth; } set { TotalPixels = value; } }
-        public TrackList TrackList { get { return TrackList; } }
-        public string Picture { get { return picture; } set { picture = ; } }
+        public TrackList TrackList { get { return trackList; } }
+        public string Picture { get { return picture; } set { picture = "~/Assets/mp3player.jpg"; } }
     }
 }

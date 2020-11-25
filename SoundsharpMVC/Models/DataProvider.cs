@@ -50,27 +50,6 @@ namespace SoundsharpMVC.Models
             
         }
         //Maak een lijst met memorecorders
-        public static List<MemoRecorder> GetDefaultMemorecords()
-        {
-            List<MemoRecorder> recorders = new List<MemoRecorder>();
-            MemoRecorder mr1 = new MemoRecorder();
-            mr1.Make = "Sony";
-            mr1.Model = "ICD-BX700";
-            mr1.PriceExBtw = 43.99m;
-            mr1.CreationDate = new DateTime(2010, 10, 1);
-
-            MemoRecorder mr2 = new MemoRecorder();
-            mr2.Make = "Philips";
-            mr2.Model = "Voice Tracer LF";
-            mr2.PriceExBtw = 139.00m;
-            mr2.CreationDate = new DateTime(2010, 1, 10);
-            MemoRecorder mr3 = new MemoRecorder();
-            mr3.Make = "Olympus";
-            mr3.Model = "VN 500";
-            mr3.PriceExBtw = 30.00m;
-            mr3.CreationDate = new DateTime(2010, 1, 5);
-            return recorders;
-        }
         public static List<MemoRecorder> GetDefaultMemorecorders()
         {
             List<MemoRecorder> recorders = new List<MemoRecorder>();
@@ -126,6 +105,16 @@ namespace SoundsharpMVC.Models
             DiscMans.Add(dm3);
             DiscMans.Add(dm4);
             return DiscMans;
+        }
+        public static List<Mp3Player> GetDefaultMp3Players()
+        {
+            List<Mp3Player> mp3Players = new List<Mp3Player>();
+            Mp3Player mp1 = new Mp3Player();
+            mp1.MbSize = 100;
+            mp1.DisplayHeight = 10;
+            mp1.DisplayWidth = 10;
+            mp3Players.Add(mp1);
+            return mp3Players;
         }
     }
 }
