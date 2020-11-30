@@ -113,7 +113,22 @@ namespace SoundsharpMVC.Models
             mp1.MbSize = 100;
             mp1.DisplayHeight = 10;
             mp1.DisplayWidth = 10;
+            Mp3Player mp2 = new Mp3Player();
+            mp2.MbSize = 200;
+            mp2.DisplayHeight = 15;
+            mp2.DisplayWidth = 15;
+            Mp3Player mp3 = new Mp3Player();
+            mp3.MbSize = 300;
+            mp3.DisplayHeight = 15;
+            mp3.DisplayWidth = 15;
+            Mp3Player mp4 = new Mp3Player();
+            mp4.MbSize = 400;
+            mp4.DisplayHeight = 20;
+            mp4.DisplayWidth = 20;
             mp3Players.Add(mp1);
+            mp3Players.Add(mp2);
+            mp3Players.Add(mp3);
+            mp3Players.Add(mp4);
             return mp3Players;
         }
     }

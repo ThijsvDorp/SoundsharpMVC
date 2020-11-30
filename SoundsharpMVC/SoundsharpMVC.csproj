@@ -182,6 +182,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MemorecorderController.cs" />
+    <Compile Include="Controllers\Mp3PlayerController.cs" />
     <Compile Include="Controllers\TrackController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -258,6 +259,8 @@
     <Content Include="Views\Memorecorder\Index.cshtml" />
     <Content Include="Views\Memorecorder\Create.cshtml" />
     <Content Include="Views\CdDiscMan\Index.cshtml" />
+    <Content Include="Views\Mp3Player\Index.cshtml" />
+    <Content Include="Views\Mp3Player\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

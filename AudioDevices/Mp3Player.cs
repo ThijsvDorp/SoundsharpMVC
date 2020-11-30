@@ -39,17 +39,17 @@ namespace AudioDevices.Devices
                 return true;
             }
         }
-       public void AddTrackList(TrackList trackList) 
-       {
+        public void AddTrackList(TrackList trackList)
+        {
             trackList.Add(new Tracks());
-       }
+        }
        public void RemoveTrackList() 
         {
             trackList.Remove(new Tracks());
         }
        public string DisplayStorageCapacity()
        {
-            int capacity = mBSize;
+            int capacity = MbSize;
             if (capacity == 0 || capacity < 0)
             {
                 return "Storage capacity unknown";
