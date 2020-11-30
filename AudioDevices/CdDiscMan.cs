@@ -38,9 +38,10 @@ namespace AudioDevices.Devices
         {
             if (isEjected == true)
             {
+
                 isEjected = false;
             }
-            if (isEjected == false)
+            else if (isEjected == false)
             {
                 isEjected = true;
             }
